@@ -1,0 +1,19 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.ModelFromInputFile(inputFileName=
+    'G:/Abaqus CAE/2_Course_Material/01_All/GUI/GUI.inp', name='GUI')
+# Save by orvil on 2023_02_13-20.04.25; build 2022 2021_09_15-23.27.30 176069
+# Save by orvil on 2023_02_13-20.53.45; build 2022 2021_09_15-23.27.30 176069
+# Save by orvil on 2023_03_04-18.38.40; build 2022 2021_09_15-23.27.30 176069
