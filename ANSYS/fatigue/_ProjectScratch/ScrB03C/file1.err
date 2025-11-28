@@ -1,0 +1,9 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       21:10:32
+
+ *** WARNING ***                         CP =       0.312   TIME= 21:10:33
+ For element 4656 the element connectivity is 0 and 6843.  The node      
+ which is identified as a 0 will be a grounded node.                     
+
+ *** WARNING ***                         CP =       0.781   TIME= 21:10:34
+ For element 4656 the element connectivity is 0 and 6843.  The node      
+ which is identified as a 0 will be a grounded node.                     

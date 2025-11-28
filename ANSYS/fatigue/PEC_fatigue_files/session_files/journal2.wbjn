@@ -1,0 +1,54 @@
+# encoding: utf-8
+# 2022 R2
+SetScriptVersion(Version="22.2.192")
+template1 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system1 = GetSystem(Name="SYS 1")
+system2 = template1.CreateSystem(
+    Position="Right",
+    RelativeTo=system1)
+geometry1 = system2.GetContainer(ComponentName="Geometry")
+geometry1.SetFile(FilePath="D:/Thesis/PEC_columbus.iges")
+modelComponent1 = system2.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system2.GetContainer(ComponentName="Model")
+model1.Edit()
+model1.Exit()
+template2 = GetTemplate(
+    TemplateName="Transient Structural",
+    Solver="ANSYS")
+system3 = template2.CreateSystem(
+    Position="Right",
+    RelativeTo=system2)
+system3.Delete()
+system4 = template2.ReplaceSystem(System=system2)
+setup1 = system4.GetContainer(ComponentName="Setup")
+setup1.Edit()
+model2 = system4.GetContainer(ComponentName="Model")
+model2.Exit()
+system4.Delete()
+system5 = template2.CreateSystem(
+    Position="Right",
+    RelativeTo=system1)
+geometry2 = system5.GetContainer(ComponentName="Geometry")
+geometry2.SetFile(FilePath="D:/Thesis/PEC_columbus.iges")
+modelComponent2 = system5.GetComponent(Name="Model")
+modelComponent2.Refresh()
+model3 = system5.GetContainer(ComponentName="Model")
+model3.Edit()
+model3.Exit()
+system5.DisplayText = "Columbus_amusement"
+system1.DisplayText = "Amusement_no_mass"
+system6 = GetSystem(Name="SYS")
+system6.DisplayText = "Weld"
+model4 = system6.GetContainer(ComponentName="Model")
+model4.Edit()
+model4.Exit()
+setup2 = system1.GetContainer(ComponentName="Setup")
+setup2.Edit()
+model5 = system1.GetContainer(ComponentName="Model")
+model5.Exit()
+model4.Edit()
+model5.Edit()
+model3.Edit()
